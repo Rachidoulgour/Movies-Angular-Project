@@ -1,0 +1,37 @@
+<div class="movies">
+        <mat-form-field class="example-chip-list">
+                <mat-chip-list #chipList aria-label="Genre selection">
+                  <mat-chip
+                    *ngFor="let genre of genres"
+                    [selectable]="selectable"
+                    [removable]="removable"
+                    (removed)="remove(genre)">
+                    {{genre.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input
+                    placeholder="Movie's genre..."
+                    #genreInput
+                    [formControl]="genreCtrl"
+                    [matAutocomplete]="auto"
+                    [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                  <mat-option *ngFor="let genre of filteredGenres | async" [value]="genre">
+                    {{genre.name}}
+                  </mat-option>
+                </mat-autocomplete>
+                
+        </mat-form-field>
+
+    <div class="movie" *ngFor="let movie of movies">
+        <div> <h2>{{movie.title}}</h2>
+        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" 
+        alt="{{movie.title}}"></div>
+        <p>{{movie.overview}}</p>
+        <button>Ver más</button>
+    </div>
+</div>

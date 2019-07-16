@@ -1,0 +1,17 @@
+<div class="login">
+       <p><span>Enter your username and password to log in</span></p>
+       <form class="login-form" (submit)="login($event)" >
+              <input type="text"
+                     name="user"    
+                     [(ngModel)]="user"
+                     placeholder="Username">   
+              <br>   
+              <input type="password"    
+                     name="password"   
+                     [(ngModel)]="password"
+                     placeholder="Password">    
+              <br>    
+              <button class="blogin-btn"type="submit">Log in</button>    
+              <div *ngIf="error">{{error}}</div>    
+       </form>
+</div>

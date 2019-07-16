@@ -1,0 +1,51 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .movie{
+        margin:2em;
+        display: flex;
+        border-radius: .5em;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(233, 244, 248);
+        padding: 2em;
+        max-width: 15em;
+        h2{
+            word-wrap: break-word;
+        }
+        img{
+            width: 250px;
+        }
+    }
+    .example-chip-list{
+        margin: 2rem;
+        display: flex;
+        mat-chip-list input{
+            background-color: rgb(218, 247, 247);
+            padding: .5rem;
+            border-radius: .5rem;
+            
+        }
+        mat-chip{
+            all: unset;
+            color: #ffffff;
+            margin: .2rem;
+            padding: .2rem;
+            background-color: rgb(151, 140, 247);
+            border-radius: .5rem;
+            mat-icon{
+                color: white;
+            }
+
+
+        }
+        mat-autocomplete{
+            mat-option{
+                all: unset;
+                background-color: aqua;
+            }
+        }
+    }
+}
