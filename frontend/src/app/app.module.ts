@@ -18,6 +18,7 @@ import { HeadComponent } from './head/head.component';
 import { LoginComponent } from './login/login.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignupComponent } from './signup/signup.component';
 // import { SearchComponent } from './search/search.component';
 
 
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     MoviesComponent,
     HeadComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
     // SearchComponent
   ],
   imports: [
